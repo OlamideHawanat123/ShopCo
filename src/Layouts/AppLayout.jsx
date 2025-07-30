@@ -1,14 +1,20 @@
 import { Outlet } from "react-router";
 import SignupDiscountBar from "../Components/SignupDiscountBar";
 import { CiSearch } from "react-icons/ci";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { FaRegUserCircle } from "react-icons/fa";
 
 export default function AppLayout() {
   return (
     <div className="max-w-[1440px] mx-auto">
       <header>
         <SignupDiscountBar />
-        <div>
-          <h1>SHOP.CO</h1>
+        <div className="flex justify-between">
+          <div>
+            <RxHamburgerMenu />
+            <h1>SHOP.CO</h1>
+          </div>
           <nav>
             <ul>
               <li>Shop</li>
@@ -21,7 +27,10 @@ export default function AppLayout() {
             <CiSearch />
             <input type="text" placeholder="Search" />
           </div>
-          <div></div>
+          <div>
+            <MdOutlineShoppingCart />
+            <FaRegUserCircle />
+          </div>
         </div>
       </header>
 
